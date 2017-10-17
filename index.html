@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Pipo</title>
+    <title>Santiago Banchero</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,27 +26,18 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="#">
-                        Start Bootstrap
+                    <a href="#" >
+                        Banchero's Home
                     </a>
                 </li>
                 <li>
-                    <a href="#">Dashboard</a>
+                    <a id="menu-research" href="#">Research</a>
                 </li>
                 <li>
-                    <a href="#">Shortcuts</a>
-                </li>
-                <li>
-                    <a href="#">Overview</a>
+                    <a href="#">Github</a>
                 </li>
                 <li>
                     <a href="#">Events</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
                 </li>
                 <li>
                     <a href="#">Contact</a>
@@ -57,12 +48,19 @@
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <h1>Simple Sidebar</h1>
+            <div id="home" class="container-fluid">
+                <h1>Santiago Banchero</h1>
+                <p></p>
+                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">\></a>
+            </div>
+            
+            <div id="research" class="container-fluid" style="display: none;">
+                <h1>Research</h1>
                 <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
                 <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
+                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Menu</a>
             </div>
+            
         </div>
         <!-- /#page-content-wrapper -->
 
@@ -79,6 +77,13 @@
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
+    });
+    
+    $(document).ready(function () {
+        $("#menu-research").click(function () {
+            $("#home").hide();
+            $("#research").show();
+        });
     });
     </script>
 
